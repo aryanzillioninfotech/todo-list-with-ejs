@@ -1,3 +1,80 @@
+/* ---------- Global Styles ---------- */
 body {
+  padding: 20px;
   background-color: #f3f3f3;
+}
+
+/* Centering form responsive */
+.responsive-form {
+  width: 350px;
+  margin: auto;
+}
+
+/* ---------- Breakpoint 576px (small phones) ---------- */
+@media (max-width: 576px) {
+  .responsive-form {
+    width: 100% !important;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .table {
+    width: 100% !important;
+  }
+}
+
+/* ---------- Breakpoint 425px (mobile) ---------- */
+@media (max-width: 425px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Breakpoint 375px (small screens) ---------- */
+@media (max-width: 375px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+
+/* ---------- Breakpoint 320px (tiny screens) ---------- */
+@media (max-width: 320px) {
+  table thead {
+    display: none;
+  }
+
+  table,
+  table tbody,
+  table tr,
+  table td {
+    display: block;
+    width: 100%;
+  }
+
+  table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
 }
